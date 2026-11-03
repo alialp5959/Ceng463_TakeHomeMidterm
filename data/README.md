@@ -8,11 +8,11 @@ Both datasets are stored unmodified in `data/raw/`. Never edit these files; all 
 |---|---|
 | File | `raw/bank-additional-full.csv` (separator `;`) |
 | Original source | UCI Machine Learning Repository, Bank Marketing dataset — https://archive.ics.uci.edu/dataset/222/bank+marketing |
-| Copy obtained from | https://raw.githubusercontent.com/selva86/datasets/master/bank-full.csv (verified identical in shape and class counts to UCI `bank-additional-full.csv`) |
+| Copy obtained from | https://archive.ics.uci.edu/static/public/222/bank+marketing.zip → `bank-additional.zip` → `bank-additional/bank-additional-full.csv` (unmodified) |
 | License | CC BY 4.0 |
 | Shape | 41,188 rows × 21 columns (20 features + target `y`) |
 | Target | `y` — did the client subscribe to a term deposit? `no`: 36,548 (88.7%), `yes`: 4,640 (11.3%) |
-| SHA-256 | `d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed` |
+| SHA-256 | `74adfc578bf77a7ff4bb1ba4a9f8709d9e3c6907342959c2c8416847e0afb4d8` |
 
 Notes for the audit (Q1):
 - Missing values are encoded as the string `"unknown"` (job, marital, education, default, housing, loan).
