@@ -1,0 +1,28 @@
+\begin{tabular}{llrrrrrrrl}
+\toprule
+ & type & n\_unique & n\_unknown & pct\_unknown & min & median & max & n\_IQR\_outliers & note \\
+column &  &  &  &  &  &  &  &  &  \\
+\midrule
+age & numeric & 78 & 0 & 0.00 & 17.00 & 38.00 & 98.00 & 469.00 & right tail (IQR outliers); plausible values \\
+job & categorical & 12 & 330 & 0.80 & NaN & NaN & NaN & NaN & 'unknown' = missing \\
+marital & categorical & 4 & 80 & 0.19 & NaN & NaN & NaN & NaN & 'unknown' = missing \\
+education & categorical & 8 & 1731 & 4.20 & NaN & NaN & NaN & NaN & 'unknown' = missing; 'illiterate' very rare \\
+default & categorical & 3 & 8597 & 20.87 & NaN & NaN & NaN & NaN & 'unknown' 20.9\%; 'yes' only 3 rows -> almost no information \\
+housing & categorical & 3 & 990 & 2.40 & NaN & NaN & NaN & NaN & 'unknown' = missing; same rows as loan \\
+loan & categorical & 3 & 990 & 2.40 & NaN & NaN & NaN & NaN & 'unknown' = missing; same rows as housing \\
+contact & categorical & 2 & 0 & 0.00 & NaN & NaN & NaN & NaN &  \\
+month & categorical & 10 & 0 & 0.00 & NaN & NaN & NaN & NaN & no Jan/Feb; encodes time \\
+day\_of\_week & categorical & 5 & 0 & 0.00 & NaN & NaN & NaN & NaN &  \\
+duration & numeric & 1544 & 0 & 0.00 & 0.00 & 180.00 & 4918.00 & 2963.00 & TARGET LEAKAGE: known only after the call; duration=0 => y=no \\
+campaign & numeric & 42 & 0 & 0.00 & 1.00 & 2.00 & 56.00 & 2406.00 & heavy right tail (max 56) \\
+pdays & numeric & 27 & 0 & 0.00 & 0.00 & 999.00 & 999.00 & 1515.00 & 999 = sentinel 'never contacted' (96\%); not a number of days \\
+previous & numeric & 8 & 0 & 0.00 & 0.00 & 0.00 & 7.00 & 5625.00 &  \\
+poutcome & categorical & 3 & 0 & 0.00 & NaN & NaN & NaN & NaN & 'nonexistent' consistent with previous==0 \\
+emp.var.rate & numeric & 10 & 0 & 0.00 & -3.40 & 1.10 & 1.40 & 0.00 & macro indicator; rho>0.9 with euribor3m, nr.employed \\
+cons.price.idx & numeric & 26 & 0 & 0.00 & 92.20 & 93.75 & 94.77 & 0.00 & macro indicator \\
+cons.conf.idx & numeric & 26 & 0 & 0.00 & -50.80 & -41.80 & -26.90 & 447.00 & macro indicator \\
+euribor3m & numeric & 316 & 0 & 0.00 & 0.63 & 4.86 & 5.04 & 0.00 & macro indicator; rho>0.9 with emp.var.rate, nr.employed \\
+nr.employed & numeric & 11 & 0 & 0.00 & 4963.60 & 5191.00 & 5228.10 & 0.00 & macro indicator; rho>0.9 with emp.var.rate, euribor3m \\
+y & target & 2 & 0 & 0.00 & NaN & NaN & NaN & NaN & imbalanced: 11.3\% yes \\
+\bottomrule
+\end{tabular}

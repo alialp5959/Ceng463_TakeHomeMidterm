@@ -1,0 +1,10 @@
+,count
+pdays == 999 (sentinel: never contacted),39673
+pdays == 999 but poutcome != 'nonexistent',4110
+previous == 0 but poutcome != 'nonexistent',0
+duration == 0,4
+duration == 0 and y == 'yes',0
+campaign > 20 calls,157
+age >= 90,10
+default == 'yes',3
+housing and loan both 'unknown' (same rows),990

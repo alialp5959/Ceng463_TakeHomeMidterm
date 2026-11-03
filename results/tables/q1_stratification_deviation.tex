@@ -1,0 +1,23 @@
+\begin{tabular}{lllrrr}
+\toprule
+ &  &  & mean\_dev\_pp & max\_dev\_pp & dev\_at\_SEED\_pp \\
+scenario & method & partition &  &  &  \\
+\midrule
+\multirow[t]{6}{*}{full data (n=41176)} & \multirow[t]{3}{*}{stratified} & train & 0.001 & 0.001 & 0.001 \\
+ &  & validation & 0.003 & 0.003 & 0.003 \\
+ &  & test & 0.001 & 0.001 & 0.001 \\
+\cline{2-6}
+ & \multirow[t]{3}{*}{random} & train & 0.098 & 0.399 & 0.115 \\
+ &  & validation & 0.239 & 1.120 & 0.179 \\
+ &  & test & 0.256 & 0.876 & 0.523 \\
+\cline{1-6} \cline{2-6}
+\multirow[t]{6}{*}{subsample (n=500)} & \multirow[t]{3}{*}{stratified} & train & 0.000 & 0.000 & 0.000 \\
+ &  & validation & 0.000 & 0.000 & 0.000 \\
+ &  & test & 0.000 & 0.000 & 0.000 \\
+\cline{2-6}
+ & \multirow[t]{3}{*}{random} & train & 0.832 & 3.000 & 1.000 \\
+ &  & validation & 2.130 & 10.000 & 4.000 \\
+ &  & test & 2.118 & 10.000 & 1.000 \\
+\cline{1-6} \cline{2-6}
+\bottomrule
+\end{tabular}

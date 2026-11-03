@@ -1,0 +1,8 @@
+model family,numeric missingness,scaling,categorical encoding,reason
+Logistic Regression,median + indicator,yes (StandardScaler),one-hot,gradient/penalty depend on feature scale
+k-Nearest Neighbors,median + indicator,yes (essential),one-hot,distances are scale dependent
+Gaussian Naive Bayes,median + indicator,not needed,one-hot,per-feature Gaussian likelihoods
+Categorical/Bernoulli NB,constant 'missing',n/a (binned numerics),ordinal / one-hot,needs discrete inputs
+Decision Tree / RF,median + indicator,no (split invariant),ordinal or one-hot,monotone transforms do not change splits
+AdaBoost / Gradient Boosting,median + indicator,no,ordinal or one-hot,tree base learners
+Dummy baseline,-,-,-,ignores features
